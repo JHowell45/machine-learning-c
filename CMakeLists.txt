@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(machine-learning)
 
-set(CORE src/core)
-set(LINEAR_ALGEBRA src/linear_algebra)
+file(GLOB SOURCES "src/*.c")
+file(GLOB HEADERS "include/*.h")
 
-add_subdirectory(${CORE})
-add_subdirectory(${LINEAR_ALGEBRA})
+add_library(machine-learning SHARED ${SOURCES} ${HEADERS})
+target_include_directories(machine-learning PUBLIC include)

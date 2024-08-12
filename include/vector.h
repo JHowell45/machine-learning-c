@@ -7,8 +7,10 @@ typedef struct {
     size_t index;
     size_t capacity;
     double **items;
-} vector_t;
+} vector_space_t;
 
-vector_t *newVec(size_t capacity);
+vector_space_t *newVecSpace(size_t capacity);
+
+void freeVecSpace(vector_space_t *space);
 
 #endif
