@@ -8,10 +8,10 @@
 typedef struct {
     size_t rows;
     size_t columns;
-    vector_t **items;
+    double **items;
 } matrix_t;
 
-matrix_t *newMatrix(size_t rows, size_t columns);
+matrix_t *newMatrix(size_t rows, size_t columns, double *data);
 
 void matrixPrint(matrix_t *matrix);
 
