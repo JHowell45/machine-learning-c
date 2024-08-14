@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(machine-learning)
+set(PROJECT_NAME machine-learning)
+
+project(${PROJECT_NAME})
 
 if (NOT DEFINED ENV{CUSTOM_C_LIBRARY_DEST})
     message(FATAL_ERROR "Please set the CUSTOM_C_LIBRARY_DEST environment variable!")
 endif()
 
-set(LIBRARY_DEST $ENV{CUSTOM_C_LIBRARY_DEST})
+set(LIBRARY_DEST $ENV{CUSTOM_C_LIBRARY_DEST}/${PROJECT_NAME})
 
 message("\n############################################# SETUP #############################################\n")
 message(LIBRARY_DEST: ${LIBRARY_DEST})
