@@ -29,8 +29,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 ####################################################################################
 set(EXAMPLES_DIR examples)
 
-# add_executable(example_2_1 ${EXAMPLES_DIR}/example_2_1.c)
-# target_link_libraries(example_2_1 ${PROJECT_NAME})
+add_executable(test_multi_arrays ${EXAMPLES_DIR}/test_multi_arrays.c)
+target_link_libraries(test_multi_arrays ${PROJECT_NAME})
 
 ####################################################################################
 #  Tests:
