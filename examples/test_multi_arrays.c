@@ -1,7 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include <matrix.h>
 
-#define ARRAY_2D_Y 4
-#define ARRAY_2D_X 3
+#define ARRAY_2D_X 4
+#define ARRAY_2D_Y 3
+
 
 int main(void) {
     double data[ARRAY_2D_Y][ARRAY_2D_X] = {
