@@ -11,6 +11,8 @@ typedef struct {
 
 vector_space_t *newVecSpace(size_t capacity);
 
+void *vectorSpacePush(vector_space_t *vec, double item);
+
 void freeVecSpace(vector_space_t *space);
 
 #endif
