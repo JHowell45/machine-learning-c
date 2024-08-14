@@ -31,6 +31,7 @@ void freeMatrix(matrix_t *matrix) {
     for (int x = 0; x < matrix->columns; x++) {
         free(matrix->items[x]);
     }
+    free(matrix->items);
     free(matrix);
 }
 
