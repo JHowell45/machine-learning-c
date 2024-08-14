@@ -29,8 +29,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 ####################################################################################
 set(EXAMPLES_DIR examples)
 
-add_executable(example_2_1 ${EXAMPLES_DIR}/example_2_1.c)
-target_link_libraries(example_2_1 ${PROJECT_NAME})
+# add_executable(example_2_1 ${EXAMPLES_DIR}/example_2_1.c)
+# target_link_libraries(example_2_1 ${PROJECT_NAME})
 
 ####################################################################################
 #  Tests:
