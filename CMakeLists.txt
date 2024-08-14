@@ -23,11 +23,19 @@ add_library(machine-learning SHARED ${SOURCES} ${HEADERS})
 target_include_directories(machine-learning PUBLIC include)
 
 ####################################################################################
+#  Examples:
+####################################################################################
+set(EXAMPLES_DIR examples)
+
+add_executable(example_2_1 ${EXAMPLES_DIR}/example_2_1.c)
+target_link_libraries(example_2_1 machine-learning)
+
+####################################################################################
 #  Tests:
 ####################################################################################
-set(TEST_DIR tests)
+set(TESTS_DIR tests)
 
-add_executable(test_vector ${TEST_DIR}/test_vector.c)
+add_executable(test_vector ${TESTS_DIR}/test_vector.c)
 target_link_libraries(test_vector machine-learning)
 
 enable_testing()
