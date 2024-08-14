@@ -36,3 +36,9 @@ add_test(
     NAME test_vector
     COMMAND test_vector
 )
+
+####################################################################################
+#  Installation:
+####################################################################################
+install(TARGETS machine-learning DESTINATION ${LIBRARY_DEST}/lib)
+install(FILES ${HEADERS} DESTINATION ${LIBRARY_DEST}/include)
