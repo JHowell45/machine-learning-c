@@ -20,8 +20,9 @@ int main(void) {
         printf("\n");
     }
 
-    matrix_t *matrix = newMatrix(ARRAY_2D_Y, ARRAY_2D_X, &data);
-    matrixPrint(matrix);
+    matrix_t *matrix = newMatrix(ARRAY_2D_Y, ARRAY_2D_X, data);
+    // matrixPrint(matrix);
     freeMatrix(matrix);
+    // free(data);
     return 0;
 }
