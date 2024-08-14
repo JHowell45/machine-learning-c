@@ -21,8 +21,8 @@ file(GLOB HEADERS "include/*.h")
 #  Library:
 ####################################################################################
 
-add_library(machine-learning SHARED ${SOURCES} ${HEADERS})
-target_include_directories(machine-learning PUBLIC include)
+add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 ####################################################################################
 #  Examples:
@@ -30,25 +30,25 @@ target_include_directories(machine-learning PUBLIC include)
 set(EXAMPLES_DIR examples)
 
 add_executable(example_2_1 ${EXAMPLES_DIR}/example_2_1.c)
-target_link_libraries(example_2_1 machine-learning)
+target_link_libraries(example_2_1 ${PROJECT_NAME})
 
 ####################################################################################
 #  Tests:
 ####################################################################################
 set(TESTS_DIR tests)
 
-add_executable(test_vector ${TESTS_DIR}/test_vector.c)
-target_link_libraries(test_vector machine-learning)
+add_executable(test_create_vector ${TESTS_DIR}/test_create_vector.c)
+target_link_libraries(test_create_vector ${PROJECT_NAME})
 
 enable_testing()
 
 add_test(
-    NAME test_vector
-    COMMAND test_vector
+    NAME test_create_vector
+    COMMAND test_create_vector
 )
 
 ####################################################################################
 #  Installation:
 ####################################################################################
-install(TARGETS machine-learning DESTINATION ${LIBRARY_DEST}/lib)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${LIBRARY_DEST}/lib)
 install(FILES ${HEADERS} DESTINATION ${LIBRARY_DEST}/include)
