@@ -2,17 +2,24 @@
 #define VECTOR_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct {
-    size_t index;
+    size_t length;
     size_t capacity;
     double **items;
-} vector_space_t;
+} vector_t;
 
-vector_space_t *newVecSpace(size_t capacity);
+vector_t *newVec(size_t capacity);
 
-void *vectorSpacePush(vector_space_t *vec, double item);
+void vectorPush(vector_t *vec, double item);
 
-void freeVecSpace(vector_space_t *space);
+void vectorInsert(vector_t *vec, double item, size_t index);
+
+void vectorPop(vector_t *vec);
+
+void vectorRemove(vector_t *vec, size_t index);
+
+void freeVector(vector_t *vec);
 
 #endif
