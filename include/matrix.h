@@ -13,7 +13,7 @@ typedef struct {
 
 matrix_t *newMatrix(size_t rows, size_t columns);
 
-void matrixInsertColumn(matrix_t *matrix, vector_t *column, size_t columnIndex);
+void matrixPrint(matrix_t *matrix);
 
 void freeMatrix(matrix_t *matrix);
 
