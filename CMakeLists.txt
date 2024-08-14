@@ -2,6 +2,16 @@ cmake_minimum_required(VERSION 3.15)
 
 project(machine-learning)
 
+if (NOT DEFINED ENV{CUSTOM_C_LIBRARY_DEST})
+    message(FATAL_ERROR "Please set the CUSTOM_C_LIBRARY_DEST environment variable!")
+endif()
+
+set(LIBRARY_DEST $ENV{CUSTOM_C_LIBRARY_DEST})
+
+message("\n############################################# SETUP #############################################\n")
+message(LIBRARY_DEST: ${LIBRARY_DEST})
+message("\n#################################################################################################\n")
+
 file(GLOB SOURCES "src/*.c")
 file(GLOB HEADERS "include/*.h")
 
