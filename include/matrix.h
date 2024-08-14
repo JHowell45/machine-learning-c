@@ -11,7 +11,7 @@ typedef struct {
     double **items;
 } matrix_t;
 
-matrix_t *newMatrix(size_t rows, size_t columns, double *data);
+matrix_t *newMatrix(size_t columns, size_t rows, double *data);
 
 void matrixPrint(matrix_t *matrix);
 
