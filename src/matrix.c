@@ -3,6 +3,9 @@
 
 #include "matrix.h"
 
+// Columns are 'x'
+// Rows are 'y'
+
 matrix_t *newMatrix(size_t rows, size_t columns, double *data) {
     printf("ROWS: %zu\n", rows);
     printf("COLUMNS: %zu\n", columns);
