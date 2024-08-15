@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "vector.h"
 #include "matrix.h"
 
 matrix_t *newMatrix(size_t columns, size_t rows, double *data) {
-    printf("data: %lf\n", data[3]);
     matrix_t *matrix = malloc(sizeof(matrix_t));
     matrix->rows = rows;
     matrix->columns = columns;
@@ -14,7 +12,6 @@ matrix_t *newMatrix(size_t columns, size_t rows, double *data) {
         matrix->items[y] = calloc(matrix->rows, sizeof(double));
         for (int x = 0; x < matrix->rows; x++) {
             size_t index = (y * matrix->columns + y) + x;
-            printf("INDEX: %zu || X: %d, Y: %d, Y2: %zu\n", index, x, y, (y * matrix->columns + y));
             matrix->items[y][x] = data[index];
         }
     }
@@ -22,13 +19,14 @@ matrix_t *newMatrix(size_t columns, size_t rows, double *data) {
 }
 
 void matrixPrint(matrix_t *matrix) {
-    printf("HELLO");
-    for (int x = 0; x < matrix->columns; x++) {
-        for (int y = 0; y < matrix->rows; y++) {
+    for (int y = 0; y < matrix->columns; y++) {
+        printf("[");
+        for (int x = 0; x < matrix->rows; x++) {
             printf("%lf, ", matrix->items[y][x]);
         }
-        printf("\n");
+        printf("]\n");
     }
+    printf("\n");
 }
 
 void freeMatrix(matrix_t *matrix) {
