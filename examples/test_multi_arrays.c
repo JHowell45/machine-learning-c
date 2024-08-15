@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <matrix.h>
+#include "matrix.h"
 
 #define ARRAY_2D_X 4
 #define ARRAY_2D_Y 3
