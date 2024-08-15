@@ -3,8 +3,6 @@
 
 #include <stdlib.h>
 
-#include "vector.h"
-
 typedef struct {
     size_t rows;
     size_t columns;
