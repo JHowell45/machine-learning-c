@@ -22,7 +22,6 @@ int main(void) {
     printf("\n");
 
     matrix_t *matrix = newMatrix(ARRAY_2D_ROWS, ARRAY_2D_COLS, data);
-    matrixPrint(matrix);
     freeMatrix(matrix);
     return 0;
 }

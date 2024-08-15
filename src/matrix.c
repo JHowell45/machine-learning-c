@@ -18,6 +18,8 @@ matrix_t *newMatrix(size_t rows, size_t columns, double *data) {
             matrix->items[y][x] = data[index];
         }
     }
+    printf("\n");
+    matrixPrint(matrix);
     return matrix;
 }
 
