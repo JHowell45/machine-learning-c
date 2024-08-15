@@ -13,16 +13,16 @@ int main(void) {
         {9,10,11,12}
     };
 
-    for (int x = 0; x < ARRAY_2D_X; x++) {
-        for (int y = 0; y < ARRAY_2D_Y; y++) {
+    for (int y = 0; y < ARRAY_2D_Y; y++) {
+        for (int x = 0; x < ARRAY_2D_X; x++) {
             printf("%lf, ", data[y][x]);
         }
         printf("\n");
     }
+    printf("\n");
 
     matrix_t *matrix = newMatrix(ARRAY_2D_Y, ARRAY_2D_X, data);
-    // matrixPrint(matrix);
+    matrixPrint(matrix);
     freeMatrix(matrix);
-    // free(data);
     return 0;
 }
